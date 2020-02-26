@@ -1,0 +1,372 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <style>            
+            .body{
+                font-style: Roboto;
+                font-size: 24px;
+                overflow-y: hidden;
+            }
+
+            .sidebar-wrapper {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                right: 552px;
+                bottom: 0px;
+                z-index: 0;
+                width: 40%;
+                height: 100%;
+                padding: 650px 85px 50px;
+                background-image:linear-gradient(#effcef,#94d3ac);
+            }
+
+            .about_container {
+                position: absolute;
+                left: 85px;
+                right: 0px;
+                bottom: 15%;
+                width: 65%;
+                padding-top:10%;
+            }
+
+            .about {
+                left: 85px;
+                display: flex;
+                margin-top: 0px;
+            }
+
+            .about-copy {
+                display: block;
+                width: 100%;
+                margin-top: 50px;
+                font-size: 17px;
+                line-height: 26px;
+                text-align: center;
+                
+            }
+
+            .social {
+                display:flex;
+                height: 24px;
+                margin-top: 45px;
+                margin-bottom: 65px;
+                align-items: center;
+            }
+            
+            .button-placement {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+
+
+            .img-profile{
+                max-width: 30vh;
+                height: auto;
+            }
+            
+            .instagram{
+                width: 10vh;
+                height: auto;
+
+            }
+
+            .twitter{
+                width: 8vh;
+                height: auto;
+
+            }
+
+            .github{
+                width: 9vh;
+                height: auto;
+            }
+
+
+            .content-wrapper{
+                width: 60%;
+                height: 100vh;
+                margin-left: 40%;
+                display: flex;
+                position: static;
+                flex-wrap: nowrap;
+                overflow-x: visible;
+                overflow-y: hidden;
+                
+            }
+            
+            .container-navbar{
+                width: 50%;
+                display: flex;
+                position: fixed;
+            }
+
+            .about-me{
+                min-width: 100%;
+                padding-top:15%;
+                padding-bottom:20%;
+                padding-left: 25%;
+                padding-right: 20%;
+                background-image: linear-gradient( #fbe555, #f45905);
+                font-size: 20px;
+                overflow-y: hidden;
+                font-style: Roboto;
+            }
+
+            .education{
+                min-width: 100%;
+                padding-top:15%;
+                padding-bottom:25%;
+                padding-left: 20%;
+                background-image: linear-gradient( #e7f0c3, #a4d4ae);
+                overflow-y: hidden;
+                font-size: 20px;
+                font-style: Roboto;
+            }
+
+            .exp{
+                min-width: 100%;
+                padding-top:15%;
+                padding-bottom:25%;
+                padding-left: 20%;
+                background-image: linear-gradient(180deg, #54e7c7, #75b79e);
+                overflow-y: hidden;
+                font-style: Roboto;
+            }
+            .organizations{
+                border: 5px solid black;
+                border-radius: 10px;
+                max-width: 45%;
+                padding-left: 3%;
+                padding-top: 2%;
+                margin-left: 17%;
+                margin-bottom: 7%;
+                font-style: Roboto;
+            }
+            .awards{
+                border: 5px solid black;
+                border-radius: 10px;
+                padding-left: 3%;
+                max-width: 45%;
+                padding-top: 2%;
+                margin-left: 17%;
+                font-style: Roboto;
+            }
+
+
+            @media only screen and (max-width: 736px) {
+                
+                .content-wrapper{
+                    overflow-y: visible;
+                    height: auto;
+                }
+                
+                .sidebar-wrapper{
+                    margin-left: 0em;
+                    margin-right: 50px;
+                }
+            
+                .about-me {
+                    font-size: 15px;
+                    height: auto;
+                    overflow-y: visible
+                }
+                .education {
+                    font-size: 15px;
+                    height: auto;
+                    overflow-y: visible
+                }
+                .organizations {
+                    font-size: 10px;
+                    height: auto;
+                    overflow-y: visible
+                }
+                .awards {
+                    font-size: 10px;
+                    height: auto;
+                    overflow-y: visible
+                }
+                .h1 {
+                    font-size: 3rem;
+                }
+
+                .instagram{
+                    max-width: 7vh;
+                    height: auto;
+                }
+                .twitter{
+                    max-width: 5vh;
+                    height: auto;
+                }
+                .github{
+                    max-width: 5vh;
+                    height: auto;
+                }                
+                .about_container{
+                    left: 15%
+                }
+
+                .img-profile {
+                    max-width: 10vh;
+                    height: auto
+                }
+            }                
+
+            
+            
+            
+            
+        </style>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <title>Story-3</title>
+    </head>
+
+    <body>
+        <div class="sidebar-wrapper">
+            <div class="about_container">
+                <img src="static/gambarmuka_cropped.png" class="img-profile rounded-circle mx-auto d-block">
+                    <div class="about-copy">
+                        <h4 style="font-weight: 800;">Hi There!</h4>
+                    <p>Welcome to My Profile Page<br> Have a Look Around.<br>...</p>
+                    </div>    
+                <div class="button-placement d-flex justify-content-center">
+                    <a href="{% url 'contact' %}" class="btn btn-secondary btn-lg" role="button">. .Say Hello!. .</a>
+                </div>
+
+                <div class="social d-flex justify-content-around align-self-center">
+                    <a href="https://www.instagram.com/nyomangedar/"><img src="static/instagram.png" class="instagram"></a>
+                    <div></div>
+                    <a href="https://twitter.com/hitrashpanda"><img src="static/Twitter_bleached.png" class="twitter"></a>
+                    <div></div>
+                    <a href="https://github.com/nyomangedar"><img src="static/new_github_white.png" class="github"></a>
+                </div> 
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="container-navbar">
+                <nav class="navbar navbar-expand-lg navbar-light" style="min-width: 150%">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#aboutme"><h4>About Me</h4></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#edu"><h4>Educations</h4></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#expe"><h4>Experiences</h4></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'forms' %}"><h4>Form<h4></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'data' %}"><h4>Data<h4></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="modal" data-target="#exampleModalLong"><h4>Modal</h4></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+            <div id="aboutme" class="about-me">
+                <h1 style="font-weight: 700; font-style: italic;">About me</h1>
+                <p style="margin-top: 10%;">
+                    Name : I Nyoman Gde Gedar Marchiendo Pradnyana<br>
+                    <br>
+                    NPM : 1906318086<br>
+                    <br>
+                    Major : Computer Science<br>
+                    <br>
+                </p>
+                <p style="text-indent: 50px; text-align: justify;">
+                    I'm an international class student in Fasilkom UI and my major is Computer Science. I hope I can survive in this major without having to redo any subject and have a decent GPA wish me Luck :)))
+                </p>
+                {% block content %}{% endblock %}
+            </div>
+            <div id="edu" class="education">
+                <h1 style="font-weight: 700; font-style: italic">Education</h1>
+                <h3 style="margin-top: 10%;">Graduated</h3>
+                <ul>
+                    <li>
+                        <p>Junior High School :<br>
+                        (2016) SMPN 49 Jakarta</p>
+                    </li>
+                    <li>
+                        <p>High School :<br>
+                        (2019) SMAN 39 Jakarta</p>
+                    </li>
+                </ul>
+                <h3 style="padding-left:45%; margin-top:7%;">University</h3>
+                <ul style="padding-left: 50%;">
+                    <li>
+                        <p>University of Indonesia :<br>
+                        Computer Science Major</p>
+                    </li>
+                </ul>                
+            </div>
+            <div id="expe" class="exp">
+                <h1 style="margin-bottom: 7%; font-weight: 700; font-style: italic">Experiences</h1>
+                <div class="organizations">
+                    <h3>Organizations</h3>
+                    <ul style="padding-top: 3%;">
+                        <li>OSIS</li>
+                        <li>KMHD</li>
+                        <li>Perhimpunan Pemuda Pura TMII</li>
+                    </ul>
+                </div>
+                <div class="awards">
+                    <h3>Awards</h3>
+                    <ul style="padding-top: 5%;">
+                        <li>SEKBID OSIS Terbaik 17/18<br>
+                        (2019)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Example Modal</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<br><br>
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?" 
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        </script>
+    
+    </body>
+
+</html>
